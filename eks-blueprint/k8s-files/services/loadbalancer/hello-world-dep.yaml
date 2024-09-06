@@ -10,7 +10,7 @@ spec:
   template: # create pods using pod definition in this template
     metadata:
       labels:
-        app: helloworld
+        apps: helloworld
     spec:
       containers:
       - name: helloworld

@@ -6,10 +6,13 @@ metadata:
     app: my-app
 spec:
   type: LoadBalancer
-  ports:
-  - name: http
-    port: 80
-    targetPort: http
+  ports: 
+  - targetPort: 8080
+    protocol: TCP
+  - port: 80
+  - targetPort: 80
+    protocol: TCP
+  
   selector:
     app: my-app
     
