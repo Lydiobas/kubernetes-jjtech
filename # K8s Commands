@@ -6,21 +6,19 @@ General commands
 alias k=kubectl
 alias kgp="kubectl get po" 
 alias kgn="kubectl get nodes"
-
-k get po -n application --show-labels # show lables for pods
-
+k api-resources # To get all api resources i.e their NAME, SHORTNAMES, APIVERSION, NAMESPACED, KIND
+k create ns sunshine  # To create namespace
+k get ns # To get list of namespaces
+k delete ns <name of namespace> # To delete namespace
+k apply -f <path to yaml file> # to apply yaml file to k8s cluster. i.e pod nginx -n application
+k get po -n sunshine --show-labels # show lables for pods
+k delete pod <podname> -n sunshine # delete pod from sunshine namespace
 k get po -o wide # to get list of nodes on which pods are deployed
-
 aws eks update-kubeconfig --name jjtech-demo-cluster --region us-east-1  # to update kubeconfig
 
 kubectl create ns tower  # To create namespace
-
-kubectl api-resources  # To get all api resources i.e their NAME, SHORTNAMES, APIVERSION, NAMESPACED, KIND
-
 Kubectl run -h # to get list of subcommands
-
 kubectl get <object e.g pod, deployment, service etc ...> -A # Get all object resources accross all namespaces in your cluster
-
 kubectl get all # To list all objects within the default namespace else add namespace (-n <name-of-namespace>) to list all objects within a specific namespace 
 
 
