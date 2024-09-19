@@ -23,8 +23,8 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: myapp-replicaset
-  namespace: application
+  name: ourlady-pod
+  namespace: sunshine
   labels:
     app: myapp
     run: nginx
